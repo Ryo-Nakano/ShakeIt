@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="POPCORN trial_.otf">
+            <string>POPCORN</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShakeIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ItemBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-Cg-iC7">
+                                <rect key="frame" x="40" y="109" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2Go-ZZ-9O2"/>
+                                    <constraint firstAttribute="height" constant="240" id="Z8g-gF-fqq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コインゲット！！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8D-Ub-vQr">
+                                <rect key="frame" x="67.5" y="373" width="186.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvW-ND-ZMh">
+                                <rect key="frame" x="42" y="50" width="237.5" height="42"/>
+                                <fontDescription key="fontDescription" name="POPCORN" family="POPCORN" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmT-kc-Nd6">
+                                <rect key="frame" x="70.5" y="416.5" width="180" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計獲得コイン：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBa-90-6ux">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.5" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="DR4-t0-Ctv"/>
+                                            <constraint firstAttribute="width" constant="151.5" id="dvl-7e-OE3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNO-gN-YRO">
+                                        <rect key="frame" x="151.5" y="0.0" width="28.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="POPCORN" family="POPCORN" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="JKJ-R5-kiO"/>
+                                    <constraint firstItem="SNO-gN-YRO" firstAttribute="leading" secondItem="DBa-90-6ux" secondAttribute="trailing" id="cCw-59-hHc"/>
+                                    <constraint firstAttribute="height" constant="24" id="gez-dc-W9A"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhM-4m-2D8">
+                                <rect key="frame" x="80" y="480.5" width="160" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.52854704042744327" blue="0.35254264407096669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="NPH-br-9vN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="チキる"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XhM-4m-2D8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="60g-Xy-wwh"/>
+                            <constraint firstItem="IvW-ND-ZMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D2l-jo-l4b"/>
+                            <constraint firstItem="wmT-kc-Nd6" firstAttribute="top" secondItem="b8D-Ub-vQr" secondAttribute="bottom" constant="16" id="Oiq-U9-7JS"/>
+                            <constraint firstItem="9Rn-Cg-iC7" firstAttribute="top" secondItem="IvW-ND-ZMh" secondAttribute="bottom" constant="17" id="SS0-3s-DRO"/>
+                            <constraint firstItem="b8D-Ub-vQr" firstAttribute="top" secondItem="9Rn-Cg-iC7" secondAttribute="bottom" constant="24" id="bEK-GR-1L3"/>
+                            <constraint firstItem="wmT-kc-Nd6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bpu-M5-gmG"/>
+                            <constraint firstItem="XhM-4m-2D8" firstAttribute="top" secondItem="wmT-kc-Nd6" secondAttribute="bottom" constant="40" id="cHA-Tw-Sm1"/>
+                            <constraint firstItem="9Rn-Cg-iC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k3s-Zl-SLm"/>
+                            <constraint firstItem="b8D-Ub-vQr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wIk-mz-z5f"/>
+                            <constraint firstItem="IvW-ND-ZMh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="zKD-YQ-9Vc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="navigationLabel" destination="b8D-Ub-vQr" id="GO8-5N-nvK"/>
+                        <outlet property="numbersOfCoinsLabel" destination="SNO-gN-YRO" id="OiG-AP-m3L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ItemBox.png" width="384" height="380"/>
+    </resources>
 </document>

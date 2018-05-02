@@ -12,6 +12,7 @@
 		F90E47BE209981E300683A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90E47BC209981E300683A6C /* Main.storyboard */; };
 		F90E47C0209981E400683A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F90E47BF209981E400683A6C /* Assets.xcassets */; };
 		F90E47C3209981E400683A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90E47C1209981E400683A6C /* LaunchScreen.storyboard */; };
+		F90E47CC2099836000683A6C /* ItemBox.png in Resources */ = {isa = PBXBuildFile; fileRef = F90E47CB2099836000683A6C /* ItemBox.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		F90E47BF209981E400683A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F90E47C2209981E400683A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F90E47C4209981E400683A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90E47CB2099836000683A6C /* ItemBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ItemBox.png; sourceTree = "<group>"; };
+		F90E47CE2099865700683A6C /* POPCORN trial_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "POPCORN trial_.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,8 @@
 		F90E47B7209981E300683A6C /* ShakeIt */ = {
 			isa = PBXGroup;
 			children = (
+				F90E47CD2099862800683A6C /* CustomFonts */,
+				F90E47CA2099834900683A6C /* Images */,
 				F90E47B8209981E300683A6C /* AppDelegate.swift */,
 				F90E47BA209981E300683A6C /* ViewController.swift */,
 				F90E47BC209981E300683A6C /* Main.storyboard */,
@@ -62,6 +67,22 @@
 				F90E47C4209981E400683A6C /* Info.plist */,
 			);
 			path = ShakeIt;
+			sourceTree = "<group>";
+		};
+		F90E47CA2099834900683A6C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F90E47CB2099836000683A6C /* ItemBox.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F90E47CD2099862800683A6C /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				F90E47CE2099865700683A6C /* POPCORN trial_.otf */,
+			);
+			path = CustomFonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +145,7 @@
 			files = (
 				F90E47C3209981E400683A6C /* LaunchScreen.storyboard in Resources */,
 				F90E47C0209981E400683A6C /* Assets.xcassets in Resources */,
+				F90E47CC2099836000683A6C /* ItemBox.png in Resources */,
 				F90E47BE209981E300683A6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
