@@ -15,6 +15,7 @@
 		F90E47CC2099836000683A6C /* ItemBox.png in Resources */ = {isa = PBXBuildFile; fileRef = F90E47CB2099836000683A6C /* ItemBox.png */; };
 		F90E47D12099A6F000683A6C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90E47D02099A6F000683A6C /* AVFoundation.framework */; };
 		F90E47D32099A84900683A6C /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F90E47D22099A84900683A6C /* coin.mp3 */; };
+		F951158D209B6C780092C31C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F951158C209B6C780092C31C /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F90E47CE2099865700683A6C /* POPCORN trial_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "POPCORN trial_.otf"; sourceTree = "<group>"; };
 		F90E47D02099A6F000683A6C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F90E47D22099A84900683A6C /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
+		F951158C209B6C780092C31C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				F90E47B8209981E300683A6C /* AppDelegate.swift */,
 				F90E47D22099A84900683A6C /* coin.mp3 */,
 				F90E47BA209981E300683A6C /* ViewController.swift */,
+				F951158C209B6C780092C31C /* SecondViewController.swift */,
 				F90E47BC209981E300683A6C /* Main.storyboard */,
 				F90E47BF209981E400683A6C /* Assets.xcassets */,
 				F90E47C1209981E400683A6C /* LaunchScreen.storyboard */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F951158D209B6C780092C31C /* SecondViewController.swift in Sources */,
 				F90E47BB209981E300683A6C /* ViewController.swift in Sources */,
 				F90E47B9209981E300683A6C /* AppDelegate.swift in Sources */,
 			);

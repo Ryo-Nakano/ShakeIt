@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvW-ND-ZMh">
-                                <rect key="frame" x="42" y="50" width="237.5" height="42"/>
+                                <rect key="frame" x="41.5" y="50" width="237.5" height="42"/>
                                 <fontDescription key="fontDescription" name="POPCORN" family="POPCORN" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,26 +102,87 @@
                         <outlet property="infoLabel" destination="IvW-ND-ZMh" id="dp1-Q1-1nS"/>
                         <outlet property="navigationLabel" destination="b8D-Ub-vQr" id="GO8-5N-nvK"/>
                         <outlet property="numbersOfCoinsLabel" destination="SNO-gN-YRO" id="OiG-AP-m3L"/>
+                        <segue destination="3fH-pC-a8K" kind="presentation" identifier="goSecond" id="auL-Je-fbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="rFa-yq-xxw">
             <objects>
-                <viewController id="3fH-pC-a8K" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="3fH-pC-a8K" customClass="SecondViewController" customModule="ShakeIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zug-w2-sqV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あ、チキったんだ。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aee-O0-nTv">
+                                <rect key="frame" x="39" y="120" width="243" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GFd-tb-ehB"/>
+                                    <constraint firstAttribute="width" constant="243" id="evo-pi-xTx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaC-l4-O01">
+                                <rect key="frame" x="70" y="169" width="180" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aby-tX-wHO">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="37"/>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="KCw-hW-or4"/>
+                                            <constraint firstAttribute="height" constant="37" id="PlL-PZ-MzR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="枚だってさ。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-Js-PPo">
+                                        <rect key="frame" x="76" y="0.0" width="104" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="J3D-ZR-uE5"/>
+                                            <constraint firstAttribute="width" constant="104" id="XHe-Kq-ady"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="9Xc-8B-aXx"/>
+                                    <constraint firstAttribute="height" constant="37" id="XjY-L1-IBO"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcJ-do-fdc">
+                                <rect key="frame" x="22" y="407" width="276" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="もう一度不確実な事をする"/>
+                                <connections>
+                                    <action selector="button" destination="3fH-pC-a8K" eventType="touchUpInside" id="pym-8T-lSY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aaC-l4-O01" firstAttribute="top" secondItem="aee-O0-nTv" secondAttribute="bottom" constant="4" id="Eup-fg-U7v"/>
+                            <constraint firstItem="aee-O0-nTv" firstAttribute="top" secondItem="jDk-Rq-ZnS" secondAttribute="top" constant="100" id="Ll7-Mx-B3k"/>
+                            <constraint firstItem="aee-O0-nTv" firstAttribute="centerX" secondItem="Zug-w2-sqV" secondAttribute="centerX" id="hzH-yR-qCJ"/>
+                            <constraint firstItem="aaC-l4-O01" firstAttribute="centerX" secondItem="Zug-w2-sqV" secondAttribute="centerX" id="lAS-dQ-QF4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jDk-Rq-ZnS"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="aby-tX-wHO" id="aKJ-sV-DKn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9Y-1l-X8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="117"/>
+            <point key="canvasLocation" x="930" y="116.19718309859155"/>
         </scene>
     </scenes>
     <resources>

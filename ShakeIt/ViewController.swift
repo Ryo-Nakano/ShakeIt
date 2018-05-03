@@ -24,9 +24,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationLabel.text = "ざわ.. ざわ.."
-        gameMode = "Normal"
-        
         // サウンドファイルのパスを生成
         let soundFilePath = Bundle.main.path(forResource: "coin", ofType: "mp3")!
         let sound:URL = URL(fileURLWithPath: soundFilePath)
@@ -40,6 +37,11 @@ class ViewController: UIViewController {
         
         // バッファに保持していつでも再生できるようにする
         audioPlayerInstance.prepareToPlay()
+    }
+    
+    //Viewが作られる度に呼ばれる
+    override func viewWillAppear(_ animated: Bool) {
+        _init()//各種パラメータの初期化
     }
     
     
@@ -175,10 +177,10 @@ class ViewController: UIViewController {
     //『チキる』ボタン押した時に呼ばれるメソッド
     @IBAction func chikiru()
     {
+        showAlert()//アラートの表示
         //ToDo:次の画面に値を渡しつつ画面遷移するコードを記述
         //AlertCOntrollerを出して『本当にチキりますか？』とか出したい
         //そこで『チキる』を選んだら画面遷移
-        //Realmを使うか、モデル作るか、segueでやるか。
     }
     
     //乱数を発生させて、Int型で返してくれるメソッド
@@ -186,6 +188,46 @@ class ViewController: UIViewController {
         return Int(arc4random_uniform(UInt32(max - min + 1)) + min)
     }
 
+    func showAlert()
+    {
+        //①AlertControllerを作成
+        let alert = UIAlertController(title: "ほんとうにチキりますか？", message: "ほんとのほんと？", preferredStyle: .alert)
+        
+        //②アクションを定義
+        let okAction = UIAlertAction(title: "チキる", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            
+            //『チキる』ボタン押したら呼ばれる！
+            self.performSegue(withIdentifier: "goSecond", sender: self.coins)//"SecondViewController"のID持つセグエの先に画面遷移
+            //画面遷移しつつ、遷移先にcoinsの値を渡す
+        })
+        let cancelAction = UIAlertAction(title: "男気見せる", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        })
+        
+        //③AlertControllerにアクションを追加
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        //④アラートを表示
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //各種パラメータの初期化をする関数
+    func _init()
+    {
+        navigationLabel.text = "ざわ.. ざわ.."
+        gameMode = "Normal"
+        coins = 0
+        canShake = true
+        numbersOfCoinsLabel.text = "0"
+    }
+    
+    //segueを用いた画面遷移時に値を次の画面に渡す関数
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SecondViewController//segueの先にあるViewControllerを取得→SecondViewController型にダウンキャスト→変数vcに格納
+        vc.coins = coins//取得したvcの中にあるcoinsに対して、こちらのcoinsの値を渡す
+    }
 
 }
 
