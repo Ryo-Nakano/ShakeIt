@@ -101,7 +101,6 @@ class ViewController: UIViewController {
                     infoLabel.text = "運の悪さに脱帽"
                     navigationLabel.text = "死んだ。"
                     sleep(1)//1s間待つ
-                    //モーダルで画面遷移(GameOver的な画面に)
                 }
                 
             case "Coin2x"://コイン獲得数2倍,死ぬ確率2倍
@@ -124,7 +123,6 @@ class ViewController: UIViewController {
                     infoLabel.text = "ほら。欲張るから"
                     navigationLabel.text = "欲張ったら死んだ。"
                     sleep(1)//1s間待つ
-                    //ToDo:モーダルで画面遷移(GameOver的な画面に)
                 }
 
             case "Death50%"://保持コイン2倍,死ぬ確率50%
@@ -138,15 +136,14 @@ class ViewController: UIViewController {
                     //ToDo:ここもっと派手な音にしたいな
                     canShake = true
                 }
-                else{//randomNumが1-10の範囲の時
+                else{//randomNumが1-50の範囲の時
                     //GameOver
                     print("GameOver")
                     coins = 0//コイン没収
                     numbersOfCoinsLabel.text = String(coins)//コイン枚数表示
-                    infoLabel.text = "くちなわの口裂くちさけ"
+                    infoLabel.text = "引き際が大事と何度..."
                     navigationLabel.text = "死ぬと思ってた。"
                     sleep(1)//1s間待つ
-                    //ToDo:モーダルで画面遷移(GameOver的な画面に)
                 }
                 
             default://それ以外の時
@@ -218,6 +215,7 @@ class ViewController: UIViewController {
     {
         navigationLabel.text = "ざわ.. ざわ.."
         gameMode = "Normal"
+        infoLabel.text = "Shake It"
         coins = 0
         canShake = true
         numbersOfCoinsLabel.text = "0"
